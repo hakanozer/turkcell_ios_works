@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_3_Days" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="beE-Sb-JwE">
+                                <rect key="frame" x="-15" y="-23" width="471" height="919"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="9Hx-Xw-XOr" kind="modal" identifier="loginRegister" modalPresentationStyle="fullScreen" id="mQy-vI-U8Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </scene>
+        <!--Kayıt-->
+        <scene sceneID="SnQ-Vj-f65">
+            <objects>
+                <viewController id="W9A-5m-Yus" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cl3-x7-97h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Hc-tn-Hvw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Kayıt" image="calendar.badge.clock" catalog="system" id="MYX-DE-uSz"/>
+                    <connections>
+                        <segue destination="Bty-A6-EjQ" kind="presentation" modalPresentationStyle="fullScreen" id="RT2-F0-YDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41t-os-pYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="444"/>
+        </scene>
+        <!--Products-->
+        <scene sceneID="k8K-cg-dr0">
+            <objects>
+                <tableViewController id="Vrl-ow-mgR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pme-xR-x6R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J0K-jB-neO">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J0K-jB-neO" id="d18-8j-hdP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vrl-ow-mgR" id="CGg-hs-hOA"/>
+                            <outlet property="delegate" destination="Vrl-ow-mgR" id="OXY-GX-UM3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Products" id="8pG-vD-A2a">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="TPe-1K-VIh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Siparişlerim" id="Fh0-yI-Z9W">
+                            <connections>
+                                <segue destination="Nwt-oD-yfm" kind="show" id="nGY-KQ-sVQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="uDs-OT-trE" kind="show" identifier="detail" id="FVd-5O-yLs"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Id8-x4-96D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3404" y="100"/>
+        </scene>
+        <!--Ürün Detay-->
+        <scene sceneID="GFC-Vg-vgv">
+            <objects>
+                <viewController id="uDs-OT-trE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5a8-ZB-EBr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BlS-en-XXV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ürün Detay" id="yAs-C5-zJK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAc-mV-G14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4206" y="383"/>
+        </scene>
+        <!--Siparişlerim-->
+        <scene sceneID="TZq-4i-tT6">
+            <objects>
+                <tableViewController id="Nwt-oD-yfm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z4e-gh-qdX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="waU-dt-lk7">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="waU-dt-lk7" id="tjP-Lm-xfM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nwt-oD-yfm" id="66Y-yU-S3L"/>
+                            <outlet property="delegate" destination="Nwt-oD-yfm" id="fMY-D8-4DK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Siparişlerim" id="akk-Dr-MN6">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="s36-QT-IDn"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZx-xv-eI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4206" y="-309"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="taY-m6-crZ">
+            <objects>
+                <navigationController id="Bty-A6-EjQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KDO-q4-oNr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iPd-yr-Gs0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vrl-ow-mgR" kind="relationship" relationship="rootViewController" id="nuR-sO-915"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DjC-KS-Fi2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2680" y="100"/>
+        </scene>
+        <!--Giriş-->
+        <scene sceneID="aD0-52-0lZ">
+            <objects>
+                <viewController id="30n-f7-b5F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYa-fD-594">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="268-XK-K3I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Giriş" image="tray.2" catalog="system" id="gfh-VP-LpT"/>
+                    <connections>
+                        <segue destination="Bty-A6-EjQ" kind="presentation" identifier="products" modalPresentationStyle="fullScreen" id="wlq-4c-KbV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rw5-js-TzU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="-238"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Oub-Ol-udi">
+            <objects>
+                <tabBarController id="9Hx-Xw-XOr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="t3w-Lg-d4L"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ju5-PK-ebE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="30n-f7-b5F" kind="relationship" relationship="viewControllers" id="BVU-Ir-ajH"/>
+                        <segue destination="W9A-5m-Yus" kind="relationship" relationship="viewControllers" id="sPj-Ja-xym"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jc2-mz-cxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="90"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wlq-4c-KbV"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
+        <image name="splash" width="1242" height="2208"/>
+        <image name="tray.2" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
